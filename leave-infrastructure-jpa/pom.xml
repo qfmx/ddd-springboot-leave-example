@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>ddd-springboot-leave-example</artifactId>
+        <groupId>cn.allms</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>leave-infrastructure-jpa</artifactId>
+    <description>基础设施层-基于jpa的实现，基础设施是依赖领域层的，而且是多模块的，也就是有多个基础设施</description>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencies>
+
+        <!--domain层-->
+        <dependency>
+            <groupId>cn.allms</groupId>
+            <artifactId>leave-domain</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <!--数据转换，可以考虑放到common-->
+        <dependency>
+            <groupId>com.codingapi.springboot</groupId>
+            <artifactId>springboot-starter-data-fast</artifactId>
+            <version>${codingapi.framework.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+        </dependency>
+
+    </dependencies>
+
+</project>
