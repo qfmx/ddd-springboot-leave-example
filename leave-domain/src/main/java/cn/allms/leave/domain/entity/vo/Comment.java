@@ -2,6 +2,7 @@ package cn.allms.leave.domain.entity.vo;
 
 import cn.allms.leave.domain.entity.User;
 import cn.allms.leave.domain.exception.ParamVerifyException;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import org.springframework.util.StringUtils;
 
@@ -11,6 +12,7 @@ import java.util.Date;
  * 值对象：审核意见
  */
 @Getter
+@AllArgsConstructor
 public class Comment {
 
     private String content;

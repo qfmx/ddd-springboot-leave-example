@@ -16,6 +16,9 @@ public class User implements IdGenerate {
     private String username;
     private String password;
 
+    public User(Long id){
+        this.id = id;
+    }
 
     public User(String username, String password) {
         this.id = System.currentTimeMillis();
