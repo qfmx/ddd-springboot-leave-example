@@ -1,0 +1,4 @@
+id,username,password,verify,result
+1,lulu,123456,123456,true
+2,xiaotang,123455,123456,false
+3,daluge,1234565,123456,false
