@@ -11,9 +11,11 @@
 为了学习ddd开发流程，初步了解ddd的基本概念，完成ddd简单的入门，所以就有了这个项目。
 本项目基于lorne大佬提供的示例手动敲写哦， 强烈推荐去看看大佬的视频和github：
 - 大佬说的话：当你无意间推开这一扇门，将会感叹原来生活可以如此的美好。确实很美好，不行你就试一试
+- 教程链接：https://github.com/1991wangliang/springboot-ddd-examples
 - github：https://github.com/codingapi/springboot-example
 - Bilibili：https://www.bilibili.com/video/BV1Jt4y1E7EX/
 - ddd framework：https://github.com/codingapi/springboot-framework
+
 ## 推荐DDD的三个理由
 - 业务逻辑可视化
 - 灵活的业务拓展性
@@ -32,12 +34,14 @@
 
 - 编写domain代码&单元测试：编写domain领域层的代码，并完成单元测试的编写，如果单元测试覆盖率高于60%，说明模型质量是可一保证的
 
+![代码覆盖率](docs/img/代码覆盖率.png)
+
 - 集成业务：验证单元测试与事件风暴中核心流程无偏差，严格使用改良版ddd架构去按照层次去落地。
 
 ![项目架构](docs/img/项目架构.png)
 
 ## 推荐的框架与软件
--SpringJPA
+- SpringJPA
   JPA是ORM框架，可以非常简单的与领域对象相关联。 https://spring.io/projects/spring-data-jpa
 
 - StartUML
