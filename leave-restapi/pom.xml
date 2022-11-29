@@ -27,7 +27,7 @@
         </dependency>
         <dependency>
             <groupId>cn.allms</groupId>
-            <artifactId>leave-infrastructure-jpa</artifactId>
+            <artifactId>leave-infrastructure-db</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
         <!--jwt-->

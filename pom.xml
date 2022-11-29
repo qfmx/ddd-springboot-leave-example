@@ -21,8 +21,7 @@
         <module>leave-restapi</module>
         <module>leave-application</module>
         <module>leave-domain</module>
-        <module>leave-infrastructure-jpa</module>
-        <module>leave-infrastructure-mybatis</module>
+        <module>leave-infrastructure-db</module>
     </modules>
 
 

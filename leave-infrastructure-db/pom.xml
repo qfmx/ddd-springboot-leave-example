@@ -9,8 +9,13 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>leave-infrastructure-jpa</artifactId>
-    <description>基础设施层-基于jpa的实现，基础设施是依赖领域层的，而且是多模块的，也就是有多个基础设施</description>
+    <artifactId>leave-infrastructure-db</artifactId>
+    <name>leave-infrastructure-db</name>
+
+    <description>
+        基础设施层-基于jpa的实现，基础设施是依赖领域层的，而且是多模块的，也就是有多个基础设施
+        基础设施时可以随时更换的，不应该影响核心业务
+    </description>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
@@ -42,6 +47,11 @@
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
         </dependency>
 
     </dependencies>
