@@ -6,6 +6,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
+import java.util.Date;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 @Slf4j
@@ -33,7 +35,8 @@ class LeaveOrderTest {
         LeaveOrder leaveOrder = new LeaveOrder(content, createUser, approvalUser);
         leaveOrder.verify();
         // 审批，同意
-        Comment comment = new Comment(approvalUser);
+        Comment comment = new Comment(content, new Date(), approvalUser, true);
+        comment.cleanRejectContent();
         assertDoesNotThrow(() -> leaveOrder.approval(comment), "请假通过审批业务失败。");
     }
 
@@ -45,8 +48,8 @@ class LeaveOrderTest {
         User approvalUser = new User(2L, "神仙", "123456");
         LeaveOrder leaveOrder = new LeaveOrder(content, createUser, approvalUser);
         leaveOrder.verify();
-        // 审批，同意
-        Comment comment = new Comment("不行，你明天必须来加班", approvalUser);
-        assertDoesNotThrow(() -> leaveOrder.approval(comment), "请假通过审批业务失败。");
+        // 审批，拒绝
+        Comment comment = new Comment(content, new Date(), approvalUser, true);
+        assertDoesNotThrow(() -> leaveOrder.approval(comment), "请假不通过审批业务失败。");
     }
 }

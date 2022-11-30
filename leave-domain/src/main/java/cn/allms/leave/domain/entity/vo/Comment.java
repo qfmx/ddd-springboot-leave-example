@@ -4,6 +4,7 @@ import cn.allms.leave.domain.entity.User;
 import cn.allms.leave.domain.exception.ParamVerifyException;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import org.springframework.util.StringUtils;
 
 import java.util.Date;
@@ -13,6 +14,7 @@ import java.util.Date;
  */
 @Getter
 @AllArgsConstructor
+@NoArgsConstructor
 public class Comment {
 
     private String content;
@@ -20,17 +22,14 @@ public class Comment {
     private User user;
     private boolean flag;
 
-    public Comment(User user) {
-        this.user = user;
-        this.flag = true;
-        this.createTime = new Date();
-    }
-
-    public Comment(String content, User user) {
-        this.content = content;
-        this.user = user;
-        this.flag = false;
-        this.createTime = new Date();
+    /**
+     * 清理拒绝内容
+     */
+    public void cleanRejectContent() {
+        // 同意时清理拒绝理由
+        if (this.flag) {
+            this.content = null;
+        }
     }
 
     public void verify() throws ParamVerifyException {
