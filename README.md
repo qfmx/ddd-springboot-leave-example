@@ -6,6 +6,8 @@
 - 使用技术：SpringBoot、Jpa、Jwt
 - 开发语言：java
 - 开发工具：idea
+- 数据库：Mysql
+
 ## 接口功能列表
 - 创建用户
 
@@ -29,7 +31,14 @@
 为了学习ddd开发流程，初步了解ddd的基本概念，完成ddd简单的入门，所以就有了这个项目。
 本项目基于lorne大佬提供的示例手动敲写哦， 强烈推荐去看看大佬的视频和github：
 - 大佬说的话：**当你无意间推开这一扇门，将会感叹原来生活可以如此的美好。确实很美好，不行你就试一试**
-- ddd framework：https://github.com/codingapi/springboot-framework`
+- 教程链接：https://github.com/1991wangliang/springboot-ddd-examples
+- github：https://github.com/codingapi/springboot-example
+- Bilibili：https://www.bilibili.com/video/BV1Jt4y1E7EX/
+- ddd framework：https://github.com/codingapi/springboot-framework
+
+## 测试相关
+接口：参考docs/postman/请假审批API.postman_collection.json, 直接导入postmain就可以了
+sql：参考docs/sql/leave.sql，直接导入数据库就可以了
 
 ## 推荐DDD的三个理由
 - 业务逻辑可视化

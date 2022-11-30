@@ -18,7 +18,7 @@
 
     <description>基于改良版本的DDD架构开发，本项目依赖请假业务为示例</description>
     <modules>
-        <module>leave-restapi</module>
+        <module>leave-ui</module>
         <module>leave-application</module>
         <module>leave-domain</module>
         <module>leave-infrastructure-db</module>

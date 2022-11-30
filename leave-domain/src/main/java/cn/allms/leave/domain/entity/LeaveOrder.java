@@ -38,8 +38,8 @@ public class LeaveOrder implements IdGenerate {
      * @param approvalUser 审核人
      */
     public LeaveOrder(String content, User createUser, User approvalUser) {
-        this.id = System.currentTimeMillis();
-        // this.id = generateLongId();
+        // test时自己把id换成时间戳，generateLongId只能在spring bean环境下使用
+        this.id = generateLongId();
         this.comments = new ArrayList<>();
         this.approvalUser = approvalUser;
         this.createUser = createUser;
@@ -110,6 +110,10 @@ public class LeaveOrder implements IdGenerate {
 
         if (state != State.CREATE && comments.size() == 0) {
             throw new ParamVerifyException("approval,finish state comments must not null.");
+        }
+        // 审批人不能是自己
+        if(createUser.getUsername().equalsIgnoreCase(approvalUser.getUsername())){
+            throw new ParamVerifyException("approvalUser must not is self.");
         }
     }
 

@@ -21,7 +21,8 @@ public class User implements IdGenerate {
     }
 
     public User(String username, String password) {
-        this.id = System.currentTimeMillis();
+        // test时自己把id换成时间戳，generateLongId只能在spring bean环境下使用
+        this.id = generateLongId();
         this.username = username;
         this.password = password;
     }
