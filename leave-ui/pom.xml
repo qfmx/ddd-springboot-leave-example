@@ -9,13 +9,15 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>leave-restapi</artifactId>
+    <artifactId>leave-ui</artifactId>
+    <name>leave-ui</name>
     <description>REST接口层次，只会依赖 应用层和基础设施层</description>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <jsonwebtoken.jjwt.version>0.11.5</jsonwebtoken.jjwt.version>
     </properties>
 
     <dependencies>
@@ -32,9 +34,21 @@
         </dependency>
         <!--jwt-->
         <dependency>
-            <groupId>com.codingapi.springboot</groupId>
-            <artifactId>springboot-starter-security-jwt</artifactId>
-            <version>${codingapi.framework.version}</version>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt-api</artifactId>
+            <version>${jsonwebtoken.jjwt.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt-impl</artifactId>
+            <version>${jsonwebtoken.jjwt.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt-jackson</artifactId>
+            <version>${jsonwebtoken.jjwt.version}</version>
         </dependency>
         <!--web-->
         <dependency>

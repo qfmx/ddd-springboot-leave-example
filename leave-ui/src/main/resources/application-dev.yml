@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: LeaveRestApplication
+  # 数据源定义
+  datasource:
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/leave
+  # jpa配置
+  jpa:
+    hibernate:
+      # 更新，启动不会清除数据
+      ddl-auto: update
+    # 显示sql
+    show-sql: true
+    generate-ddl: off
+
+# jwt配置
+leave:
+  properties:
+    jwt-rest-time: 2400000
+    jwt-time: 3600000
+    jwt-secret-key: Q2EDw2xtNINTEu3J5ijluLn2M6HboXpiNbefCKrl

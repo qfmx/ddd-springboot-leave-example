@@ -1,0 +1,7 @@
+# 服务端口
+server:
+  port: 6008
+
+spring:
+  profiles:
+    active: dev
