@@ -56,13 +56,7 @@
 ![项目架构](docs/img/项目架构.png)
 
 ## 推荐的框架与软件
-- SpringJPA
-  JPA是ORM框架，可以非常简单的与领域对象相关联。 https://spring.io/projects/spring-data-jpa
-
-- StartUML
-  StartUML是UML设计软件。https://staruml.io/
-
-- Mural
- Mural 是用于画事件风暴图的软件。https://www.mural.co/
-- 小画桌
-  小画桌于画事件风暴图、流程图、UML的软件。https://www.xiaohuazhuo.com/
+- SpringJPA：JPA是ORM框架，可以非常简单的与领域对象相关联。 https://spring.io/projects/spring-data-jpa
+- StartUML：画UML设计软件。https://staruml.io/
+- Mural：画事件风暴图的软件。https://www.mural.co/
+- 小画桌：画事件风暴图、流程图、UML的软件。https://www.xiaohuazhuo.com/
