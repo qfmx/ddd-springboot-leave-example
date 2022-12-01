@@ -22,6 +22,7 @@
         <module>leave-application</module>
         <module>leave-domain</module>
         <module>leave-infrastructure-db</module>
+        <module>leave-rpc</module>
     </modules>
 
 

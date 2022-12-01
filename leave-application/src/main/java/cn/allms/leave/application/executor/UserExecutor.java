@@ -39,20 +39,19 @@ public class UserExecutor {
     /**
      * 用户login
      *
-     * @param command 登录参数
      * @return 用户ID
      * @throws UserNotFoundException 用户不存在异常
      * @throws UserVerifyException   用户检验异常
      */
-    public long login(UserCmd.LoginCommand command) throws UserNotFoundException, UserVerifyException {
-        User user = userRepository.getUserByUsername(command.getUsername());
+    public long login(String username, String password) throws UserNotFoundException, UserVerifyException {
+        User user = userRepository.getUserByUsername(username);
         if (user == null) {
-            throw new UserNotFoundException(command.getUsername());
+            throw new UserNotFoundException(username);
         }
-        if (user.matchPwd(command.getPassword())) {
+        if (user.matchPwd(password)) {
             // 密码匹配，返回用户id，用于生成token
             return user.getId();
         }
-        throw new UserVerifyException(command.getUsername());
+        throw new UserVerifyException(username);
     }
 }

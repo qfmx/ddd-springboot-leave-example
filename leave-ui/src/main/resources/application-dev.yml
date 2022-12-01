@@ -22,3 +22,19 @@ leave:
     jwt-rest-time: 2400000
     jwt-time: 3600000
     jwt-secret-key: Q2EDw2xtNINTEu3J5ijluLn2M6HboXpiNbefCKrl
+## dubbo 配置
+dubbo:
+  application:
+    name: LeaveRestApplication
+  protocol:
+    name: dubbo
+    port: 20880
+  registry:
+    id: zk-registry
+    address: zookeeper://127.0.0.1:2181
+  config-center:
+    address: zookeeper://127.0.0.1:2181
+  metadata-report:
+    address: zookeeper://127.0.0.1:2181
+  scan:
+    base-packages: cn.allms.leave.rpc
